@@ -1,11 +1,33 @@
 body {
-    height: 100%;
+    height: 1auto;
     display: flex;
     flex-direction: column;
     margin: 0px;
   }
 
-  .background-image {
+a:link {
+    color: #666;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #666;
+    text-decoration: none;
+    background-color: #999;
+}
+
+a:active {
+    color: #666;
+    text-decoration: none;
+    background-color: #999;
+}
+
+.background-image {
     background: url(img/background.jpg); 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -22,6 +44,7 @@ body {
 
 #wrapper {
     flex: 1;
+    height: auto;
     max-width: 600;
     margin: 0 auto;
     font-family: Arial, Helvetica, sans-serif;
@@ -34,13 +57,12 @@ body {
     margin-top: 3vh;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 0px;
+    margin-bottom: 0rem;
     opacity: 0.6;
 }
 
 #content {
     margin: auto;
-    height: 150px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -53,35 +75,49 @@ body {
 }
 
 #content h1 {
-    font-size: 4em;
+    font-size: 4rem;
     font-weight: 600;
-    margin-bottom: -20px;
+    margin-bottom: -1rem;
+    margin-top: auto;
 }
 
 #content h3 {
     font-family: 'Annie Use Your Telescope', cursive;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: 300;
 }
 
-#footer {
+.footer {
     display: flex;
+    flex-direction: column;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     align-items: center;
     justify-content: center;
-    width: 100%
+    width: 100%;
+    height: auto;
+    max-height: 95%;
+}
+
+.tabs {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+#icon-mail {
+    height: 4rem;
 }
 
 .btn {
     font-weight: 600;
-    font-size: 1em;
+    font-size: 1rem;
     color: white;
-    width: 50%;
-    padding: 12px 0px;
-    background-color: rgba(40, 40, 40, 0.5);
+    width: 100%;
+    padding: 0.8rem 0px;
+    background-color: rgba(30, 30, 30, 0.6);
     border: 0px;
     margin-bottom: 0;
     cursor: pointer;
@@ -89,42 +125,91 @@ body {
     -webkit-appearance: button;
     touch-action: manipulation;
     text-align: center;
-    line-height: 1em;
+    line-height: 1rem;
     opacity: 0.6;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
 
-#datenschutz {
-    margin-right: 2px;
-    margin-left: 4px;
+.btn:hover {
+    background-color:  rgba(71, 71, 71, 0.938);
+  }
+
+#tab-datenschutz {
+    margin-right: 0.3rem;
+    margin-left: 0.5rem;
 }
 
-#impressum {
-    margin-right: 2px;
-    margin-left: 4px;
+#tab-impressum {
+    margin-right: 0.5rem;
+    margin-left: 0.3rem;
 }
 
-@media (min-height: 600px) and (min-width: 700px) {
+.tab-content {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    background-color: rgba(30, 30, 30, 0.9);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.tab-text {
+    width: 95%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 2rem;
+    display: inline-block;
+    padding: 0.75rem 1.5rem; 
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+}
+
+.tab-text p {
+    padding-right: 1rem;
+}
+
+@media (min-height: 600px) and (min-width: 1025px) {
     #logo {
-        max-height: 300px;
         display: block;
         margin-top: 7vh;
     }
 
     .btn {
-        padding: 16px 0px;
+        padding: 1rem 0px;
     }
 
-    #footer {
-        width: 60%;
+    .footer {
+        width: 50%;
         margin: auto;
     }
 }
 
-@media (max-height: 430px) {
+@media (min-height: 500px) and (min-width: 1025px) {
+    .btn {
+        padding: 1rem 0px;
+    }
+
+    .footer {
+        width: 50%;
+        margin: auto;
+    }
+}
+
+@media (max-height: 600px) {
+    #logo {
+        max-height: 100px;
+    }
+    
+}
+
+@media (max-height: 400px) {
     #logo {
         display: none;
     }
