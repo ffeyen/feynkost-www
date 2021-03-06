@@ -28,7 +28,7 @@ a:active {
 }
 
 .background-image {
-  background: url(img/background.jpg);
+  background: url(img/background.webp);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -84,7 +84,7 @@ a:active {
 #content h3 {
   font-family: "Annie Use Your Telescope", cursive;
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 400;
   font-display: swap;
 }
 
